@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Coursera Clean Copy",
+  "version": "1.0",
+  "description": "Removes overlay or blocked text on Coursera pages to make copying text easier for study and review.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.coursera.org/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
